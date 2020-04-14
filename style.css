@@ -1,0 +1,135 @@
+/* Colors */
+.root{
+
+  --color-red: hsl(0, 78%, 62%);
+  --color-Cyan: hsl(180, 62%, 55%);
+  --color-Orange: hsl(34, 97%, 64%);
+  --color-Blue: hsl(212, 86%, 64%);
+  
+}
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 50px auto;
+}
+
+#newheader {
+  text-align: center;
+  line-height: 40px;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: minmax(200px, auto);
+  grid-gap: 25px;
+  
+}
+
+/* The boxes */
+
+.division {
+  font-size: 16px;
+  padding: 0.5rem;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.05), 0 10px 10px rgba(0,0,0,0.1);
+
+}
+#one
+{ 
+  position: relative;
+  top: 110px;
+  border-top: 5px solid hsl(212, 86%, 64%);
+  line-height: 35px;
+  grid-column: 1/5;
+  margin-left: 100px;
+  padding-left: 1.5rem;
+}
+#two {
+  border-top: 5px solid hsl(0, 78%, 62%);
+  grid-column: 5/8;
+  padding-left: 1.5rem;
+  line-height: 35px;
+}
+
+#three {
+  border-top: 5px solid orange;
+  line-height: 35px;
+  order: 4;
+  grid-row: 2/3;
+  grid-column: 5/8;
+  padding-left: 1.5rem;
+}
+
+#four {
+  position: relative;
+  top: 110px;
+  border-top: 5px solid skyblue;
+  line-height: 35px;
+  grid-column: 8/11;
+  padding-left: 1.5rem;
+  padding-left: 1.5rem;
+  order: 3;
+  
+}
+
+.img {
+  display: block;
+  margin-left: auto;
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 375px) {
+  body {
+    background-color: lightblue;
+    
+  }
+  #one {
+    
+    grid-column: 1/13;
+    order: 1;
+    margin-left: 0px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    
+  }
+
+  #two {
+    grid-column: 1/13;
+    order: 2;
+  }
+
+  #three {
+    grid-column:1/13;
+    order: 3;
+  }
+#four {
+  position: relative;
+  top: 0px;
+  order: 4;
+  grid-column: 1/13;
+  margin-left: 0px;
+}
+
+body {
+  margin: 50px 32px;
+}
+}
